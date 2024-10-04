@@ -13,17 +13,17 @@ export default function TicTacToe() {
 
     // getting the reference of the title
     let titleRef = useRef(null)
-    let box1= useRef(null)
-    let box2= useRef(null)
-    let box3= useRef(null)
-    let box4= useRef(null)
+    let box1 = useRef(null)
+    let box2 = useRef(null)
+    let box3 = useRef(null)
+    let box4 = useRef(null)
     let box5 = useRef(null)
     let box6 = useRef(null)
     let box7 = useRef(null)
     let box8 = useRef(null)
     let box9 = useRef(null)
 
-    let box_array = [box1,box2,box3,box4,box5,box6,box7,box8,box9]
+    let box_array = [box1, box2, box3, box4, box5, box6, box7, box8, box9]
 
     const toggle = (e, num) => {
         if (lock) {
@@ -89,12 +89,12 @@ export default function TicTacToe() {
             titleRef.current.innerHTML = 'The Game is a "DRAW"'
         }
     }
-    function reset(){
+    function reset() {
         setLock(false)
         data = ["", "", "", "", "", "", "", "", ""];
         titleRef.current.innerHTML = `Dtanar's<span> Tic Tac Toe</span>`;
 
-        box_array.map((e) =>{
+        box_array.map((e) => {
             e.current.innerHTML = "";
         })
     }
